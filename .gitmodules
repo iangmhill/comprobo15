@@ -10,3 +10,6 @@
 [submodule "warmup_project"]
 	path = warmup_project
 	url = https://github.com/lianilychee/warmup_project.git
+[submodule "robot_localization"]
+	path = robot_localization
+	url = https://github.com/lianilychee/robot_localization.git
