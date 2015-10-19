@@ -26,6 +26,7 @@ class BallTracker(object):
         rospy.Subscriber(image_topic, Image, self.process_image)
         self.pub = rospy.Publisher('cmd_vel', Twist, queue_size=10)
         cv2.namedWindow('video_window')
+        cv2.namedWindow('binary_window')
 
     def process_image(self, msg):
         """ Process image messages from ROS and stash them in an attribute
@@ -34,6 +35,8 @@ class BallTracker(object):
         print self.cv_image.shape
         cv2.imshow('video_window', self.cv_image)
         cv2.waitKey(5)
+        binary_image = cv2.inRange(self.cv_image, (0,245,233), (139,252,252))
+        cv2.imshow('binary_window', binary_image)
 
     def run(self):
         """ The main run loop, in this node it doesn't do anything """

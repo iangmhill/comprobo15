@@ -13,3 +13,6 @@
 [submodule "robot_localization"]
 	path = robot_localization
 	url = https://github.com/lianilychee/robot_localization.git
+[submodule "project_caribou"]
+	path = project_caribou
+	url = https://github.com/lianilychee/project_caribou.git
